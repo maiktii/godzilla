@@ -13,7 +13,7 @@
 
 1. Which of the following is the correct way to declare a variable in Kotlin?
 
-   - a) `var x = 10`
+   - a) **`var x = 10`**
    - b) `let x = 10`
    - c) `dim x as 10`
    - d) `declare x = 10`
@@ -21,7 +21,7 @@
 2. What keyword is used to declare a constant in Kotlin?
 
    - a) `let`
-   - b) `const`
+   - b) **`const`**
    - c) `final`
    - d) `val`
 
@@ -29,59 +29,78 @@
 
    - a) `function myFunction() {}`
    - b) `def myFunction() {}`
-   - c) `fun myFunction() {}`
+   - c) **`fun myFunction() {}`**
    - d) `lambda myFunction() {}`
 
 4. What is the result of `5 % 2` in Kotlin?
 
    - a) `2.5`
-   - b) `1`
+   - b) **`1`**
    - c) `0`
    - d) `5`
 
 5. Which data type in Kotlin represents a true or false value?
    - a) `Int`
    - b) `String`
-   - c) `Boolean`
+   - c) **`Boolean`**
    - d) `Float`
 
 ---
 
 #### **Short Answer:**
 
-6. What is the difference between `var` and `val` in Kotlin?
+6. What is the difference between `var` and `val` in Kotlin? **Answer : var bisa direplace value pertamanya sedangkan val tidak bisa**
 
-7. How do you create a list in Kotlin?
+7. How do you create a list in Kotlin? **Answer : var list: list<TypeData> = listOf(typeData, typeData)**
 
-8. Write a simple `if-else` statement in Kotlin.
+8. Write a simple `if-else` statement in Kotlin. **Answer : val result = if (condition) true_value else false_value"**
 
-9. How do you handle nullability in Kotlin?
+9. How do you handle nullability in Kotlin? **Answer : var name:String? = ""**
 
-10. What is a lambda function in Kotlin?
+10. What is a lambda function in Kotlin? **Answer : membuat function tanpa nama**
 
-11. How do you define a class in Kotlin?
+11. How do you define a class in Kotlin? **Answer :** 
+```
+class Person {
+    var name: String = ""
+    var age: Int = 0
+
+    fun sayHello() {
+        println("Hello, my name is $name and I am $age years old.")
+    }
+}
+```
 
 12. How do you use a `for` loop to iterate through a list in Kotlin?
+**Answer:**
+```
+val fruits = listOf("Apple", "Banana", "Cherry")
 
-13. What does the `when` statement do in Kotlin?
+for (fruit in fruits) {
+    println(fruit)
+}
+```
 
-14. How do you check if a number is even in Kotlin?
 
-15. How do you declare an array in Kotlin?
+13. What does the `when` statement do in Kotlin? **Answer : pengganti switch case loop**
+
+14. How do you check if a number is even in Kotlin? **Answer : menggunakan %==0 sebagai validasi angka genap**
+
+15. How do you declare an array in Kotlin? **Answer: val list: Array<TypeData> = arrayOf(typeData1, typeData2)**
 
 ---
 
 #### **Yes/No Questions:**
 
-16. Can `val` be reassigned to a new value after its initial assignment?
+16. Can `val` be reassigned to a new value after its initial assignment? **No**
 
-17. Does Kotlin support operator overloading?
+17. Does Kotlin support operator overloading? **Yes**
 
-18. Is Kotlin fully interoperable with Java?
+18. Is Kotlin fully interoperable with Java? **Yes**
 
-19. Can a function in Kotlin return a value using `return` keyword?
+19. Can a function in Kotlin return a value using `return` keyword? **Yes**
 
-20. Can Kotlin's `when` statement be used as an expression to return values?
+20. Can Kotlin's `when` statement be used as an expression to return values? **Yes**
 
 ---
 
@@ -93,6 +112,12 @@
     val x = "Hello"
     x = "World"
     ```
+    - **Correction**:
+    ```kotlin
+    var x :String = "Hello"
+    x = "World"
+    ```
+
 
 22. **Incorrect code:**
 
@@ -108,7 +133,10 @@
     fun sum(a: Int, b: Int): Int {
         return a + b
     }
-    sum(5, 10)
+
+    fun main(){
+        println(sum(5, 10))
+    }
     ```
 
 23. **Incorrect code:**
@@ -118,16 +146,33 @@
     myList.add(4)
     ```
 
+    - **Correction**:
+    ```kotlin
+    val myList = mutableListOf(1, 2, 3)
+    myList.add(4)
+    ```
+
 24. **Incorrect code:**
 
     ```kotlin
     val name: String = null
     ```
 
+    - **Correction**:
+    ```kotlin
+    val name: String? = null
+    ```
+
 25. **Incorrect code:**
 
     ```kotlin
     if x > 5 {
+        println("x is greater than 5")
+    }
+    ```
+    - **Correction**:
+    ```kotlin
+    if (x > 5) {
         println("x is greater than 5")
     }
     ```
@@ -142,10 +187,26 @@
     }
     ```
 
+    - **Correction**:
+    ```kotlin
+    when (x) {
+        1 -> println("One")
+        2 -> println("Two")
+        else -> println("Other")
+    }
+    ```
+
 27. **Incorrect code:**
 
     ```kotlin
     fun greet() {
+        println("Hello, $name)
+    }
+    ```
+
+    - **Correction**:
+    ```kotlin
+    fun greet(name: String) {
         println("Hello, $name)
     }
     ```
@@ -157,6 +218,12 @@
     val result = myVar + 5
     ```
 
+    - **Correction**:
+    ```kotlin
+    val myVar = "10"
+    val result = myVar.toInt() + 5
+    ```
+
 29. **Incorrect code:**
 
     ```kotlin
@@ -164,11 +231,26 @@
     println(numbers[3])
     ```
 
+    - **Correction**:
+    ```kotlin
+    val numbers = arrayOf(1, 2, 3)
+    println(numbers[2])
+    ```
+
 30. **Incorrect code:**
     ```kotlin
     class Person(val name: String, val age: Int) {
         fun greet() {
             print("Hello, my name is " + name + " and I'm " + age)
+        }
+    }
+    ```
+
+    - **Correction**:
+    ```kotlin
+    class Person(val name: String, val age: Int) {
+        fun greet() {
+            print("Hello, my name is " + $name + " and I'm " + $age)
         }
     }
     ```
@@ -183,6 +265,25 @@ Imagine you are building a ticket booking system for a movie theater. Each custo
 
 Here’s the failed code:
 
+```kotlin
+fun reserveSeat(name: String, seatNumber: Int) {
+    val availableSeats = arrayOf(1, 2, 3, 4, 5)
+
+    if (availableSeats.contains(seatNumber)) {
+        availableSeats[seatNumber] = 0  // Mark the seat as reserved by setting it to 0
+        println("$name reserved seat $seatNumber.")
+    } else {
+        println("Seat $seatNumber is already reserved.")
+    }
+}
+
+fun main() {
+    reserveSeat("John", 2)
+    reserveSeat("Sarah", 2)
+}
+```
+
+- **Correction**:
 ```kotlin
 fun reserveSeat(name: String, seatNumber: Int) {
     val availableSeats = arrayOf(1, 2, 3, 4, 5)
