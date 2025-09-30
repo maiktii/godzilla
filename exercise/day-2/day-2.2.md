@@ -79,6 +79,14 @@ Sebuah toko ingin aplikasi kasir sederhana: catat produk, keranjang belanja, ter
 3. Dua mode diskon minimal: **persen** (mis. 10%) dan **nominal** (mis. Rp20.000).
 4. **Validasi:** total bersih tidak boleh negatif.
 
+**Tantangan lanjutan (pilih ≥1):**
+
+Diskon bertingkat (≥ 300k diskon 5%, ≥ 500k diskon 10%).
+
+Voucher code (mapping code → strategi diskon).
+
+Pajak PPN setelah diskon (mis. 11%).
+
 ---
 
 # 4) Klinik Sehat — Antrian Dokter, Janji Temu, & Tagihan
