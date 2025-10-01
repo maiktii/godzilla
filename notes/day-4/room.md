@@ -253,3 +253,50 @@ class RoomActivity : AppCompatActivity() {
 </LinearLayout>
 
 ```
+
+```
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="10dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <CheckBox
+        android:id="@+id/cbCheckedIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="8dp">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:text="Nama"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tvEmail"
+            android:text="email@contoh.com"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btnDelete"
+        android:src="@android:drawable/ic_delete"
+        android:contentDescription="hapus"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
+</LinearLayout>
+
+
+```
